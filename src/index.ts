@@ -63,12 +63,12 @@ async function sendTestMovieReview(signer: web3.Keypair, programId: web3.PublicK
         data: buffer,
         keys: [
             {
-                pubkey: signer.publicKey,
+                pubkey: signer.publicKey,//支付fee
                 isSigner: true,
                 isWritable: false
             },
             {
-                pubkey: pda,
+                pubkey: pda,//存储数据
                 isSigner: false,
                 isWritable: true
             },
@@ -91,7 +91,7 @@ async function main() {
     const connection = new web3.Connection(web3.clusterApiUrl('devnet'))
     await airdropSolIfNeeded(signer, connection)
     
-    const movieProgramId = new web3.PublicKey('FnHUUiX2jLSaGdt6GpgoJYKnUxzbPG5VmRPEDr1NEekm')
+    const movieProgramId = new web3.PublicKey('7bea7ZVnSk2geAfAWPrZM8pAcHnfLpQyJCrUn1qaMrig')
     await sendTestMovieReview(signer, movieProgramId, connection)
 }
 
