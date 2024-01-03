@@ -4,6 +4,14 @@ import * as fs from 'fs'
 import dotenv from 'dotenv'
 dotenv.config()
 
+/**
+ * 部署程序（智能合约）的账户：D2qp4EQvsqMHnAJ7akwseGJLtkurrFruUWmrtc2mVH6n
+ * 程序（智能合约）账户：DiNeQbEPMZspM7uF973SQhPKY5WVdz8DZ1Z4uVwTaCsv
+ * 数据账户（PDA）：gts2TagkYNu1WyiaB3jXoz4HcbKC6b8yMRZsKLeb2CK
+ * 
+ */
+
+
 function initializeSignerKeypair(): web3.Keypair {
     if (!process.env.PRIVATE_KEY) {
         console.log('Creating .env file')
@@ -91,7 +99,7 @@ async function main() {
     const connection = new web3.Connection(web3.clusterApiUrl('devnet'))
     await airdropSolIfNeeded(signer, connection)
     
-    const movieProgramId = new web3.PublicKey('7bea7ZVnSk2geAfAWPrZM8pAcHnfLpQyJCrUn1qaMrig')
+    const movieProgramId = new web3.PublicKey('DiNeQbEPMZspM7uF973SQhPKY5WVdz8DZ1Z4uVwTaCsv')
     await sendTestMovieReview(signer, movieProgramId, connection)
 }
 
