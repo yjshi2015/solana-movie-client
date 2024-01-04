@@ -8,7 +8,7 @@ dotenv.config()
  * 部署程序（智能合约）的账户：D2qp4EQvsqMHnAJ7akwseGJLtkurrFruUWmrtc2mVH6n
  * 程序（智能合约）账户：DiNeQbEPMZspM7uF973SQhPKY5WVdz8DZ1Z4uVwTaCsv
  * 数据账户（PDA）：gts2TagkYNu1WyiaB3jXoz4HcbKC6b8yMRZsKLeb2CK
- * 
+ * 前端访问账户：EAfJRzKRcDBdhGQv2Pi18vYzGDqFcCCcjbQnEvpdCGt1
  */
 
 
